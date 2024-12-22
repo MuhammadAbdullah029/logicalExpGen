@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta name="description" content="Generate logical expressions effortlessly from truth tables. Simplify boolean logic and create optimized logical statements for your projects.">
+    <meta name="keywords" content="logical expression generator, truth table to expression, boolean logic, boolean algebra, truth table generator, logic simplification, digital logic, expression creator">
+    <meta name="author" content="Muhammad Abdullah">
+    <meta name="subject" content="Logical Expression Generator">
+    <meta name="og:title" content="Logical Expression Generator - Truth Table to Expression">
+    <meta name="og:description" content="Easily convert truth tables into logical expressions. Simplify and optimize boolean logic for digital systems and projects.">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Expression Generator</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Logical Expression Generator</h1>
+        
+        <div class="input-section">
+            <label for="variables">Number of variables (1-16):</label>
+            <input type="number" id="variables" min="1" max="16" value="2">
+            <button onclick="generateTable()">Generate Table</button>
+            <button class="cls">Clear</button>
+        </div>
+
+        <div id="tableContainer"></div>
+        
+        <div class="tab-container">
+            <div class="tab-buttons">
+                <button class="tab-button active" onclick="showTab('expressions')">Expressions</button>
+                <button class="tab-button" onclick="showTab('circuit')">Circuit Diagram</button>
+            </div>
+            
+            <div id="expressions" class="tab-content active">
+                <div id="expressionContainer" class="result"></div>
+            </div>
+            
+            <div id="circuit" class="tab-content">
+                <div id="circuitDiagram"></div>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
